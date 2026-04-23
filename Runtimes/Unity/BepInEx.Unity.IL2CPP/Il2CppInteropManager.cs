@@ -329,7 +329,8 @@ internal static partial class Il2CppInteropManager
                                         GlobalMetadataPath.Value
                                                           .Replace("{BepInEx}", Paths.BepInExRootPath)
                                                           .Replace("{ProcessName}", Paths.ProcessName)
-                                                          .Replace("{GameDataPath}", Paths.GameDataPath));
+                                                          .Replace("{GameDataPath}", Paths.GameDataPath))
+                                                          .Replace(".dat",".bin");
         
         Logger.LogMessage("Running Cpp2IL to generate dummy assemblies from " + metadataPath);
 
